@@ -3,7 +3,7 @@
         <q-card>
             <q-card-section>
                 <q-list bordered separator>
-                    <VueDraggable v-model="list1" :animation="150" group="people" @update="onUpdate" @add="onAdd" @remove="remove">
+                    <VueDraggable v-model="list1" :animation="150" group="people" @update="onUpdate" @add="onAdd" @remove="remove" chosenClass="test">
                         <q-item clickable v-ripple v-for="item in list1" :key="item.id" @click="onClicked()">
                             <q-item-section>
                                 <q-item-label>{{ item.name }}</q-item-label>
@@ -81,3 +81,10 @@ function onClicked() {
     alert();
 }
 </script>
+
+<style>
+.test {
+    background: #e1f8fc;
+    color: #04a0f7;
+}
+</style>
